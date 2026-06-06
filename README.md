@@ -14,7 +14,7 @@ Um projeto simples em Node.js utilizando **TypeScript**, **Prisma ORM** e **SQLi
 
 1. Clone este repositório para sua máquina local:
    ```bash
-   git clone <URL_DO_SEU_REPOSITORIO>
+   git clone (https://github.com/harrytaveiros/Projeto-com-Prisma.git)
    cd DataBase
    ```
 
