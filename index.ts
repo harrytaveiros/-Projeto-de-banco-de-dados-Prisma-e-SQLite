@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 
-// Na versão 6, o construtor vazio funciona perfeitamente!
+
 const prisma = new PrismaClient()
 
 async function main() {
@@ -27,5 +27,11 @@ async function main() {
 }
 
 main()
-  .catch(e => console.error("❌ Erro:", e))
-  .finally(async () => await prisma.$disconnect())
+  .then(async () => {
+    await prisma.$disconnect()
+  })
+  .catch(async (e) => {
+    console.error("❌ Erro:", e)
+    await prisma.$disconnect()
+    process.exit(1)
+  })
